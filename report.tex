@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+\geometry{a4paper}
+\geometry{margin=1in}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{titling}
+
+\usepackage{pdfpages}
+
+\newcommand{\sectiontitle}{}
+\newcommand{\newsection}[1]{\section{#1}\renewcommand{\sectiontitle}{#1}}
+\newcommand{\nnewsection}[1]{\section*{#1}\renewcommand{\sectiontitle}{#1}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\thetitle}\chead{}\rhead{\sectiontitle}
+\lfoot{\theauthor}\cfoot{}\rfoot{Page \thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{subcaption}
+
+\usepackage[style=ieee]{biblatex}
+\addbibresource{references.bib}
+
+\title{The Title}
+\author{The Author}
+
+\begin{document}
+
+%%% TITLE PAGE
+\maketitle
+\thispagestyle{empty}
+
+%%% TABLE OF CONTENTS PAGE
+\newpage
+\pagenumbering{roman}
+
+\renewcommand{\sectiontitle}{Contents}
+\tableofcontents
+
+%%% REPORT CONTENT BEGINS
+\newpage
+\pagenumbering{arabic}
+
+\section{A Section}
+
+\subsection{A Subsection}
+
+%%% REFERENCES SECTION
+\newpage
+\printbibliography
+\addcontentsline{toc}{section}{References}
+
+%%% APPENDICES SECTION
+\appendix
+\nnewsection{Appendices}
+\addcontentsline{toc}{section}{Appendices}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+
+\subsection{Something}
+
+\end{document}

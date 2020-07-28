@@ -1,0 +1,30 @@
+# vim swap files
+*.swp
+
+# vim session layout
+Session.vim
+
+# pdflatex temp files
+*.out
+*.log
+*.sav
+*.aux
+
+# temp table of contents file
+*.toc
+
+# temp biber files
+*.bbl
+*.xml
+*.bcf
+*.blg
+
+# the JabRef backup file
+*.bak
+
+# pdf files
+*.pdf
+
+# the documents folder
+documents/
+
